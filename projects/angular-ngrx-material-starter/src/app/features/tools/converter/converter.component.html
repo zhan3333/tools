@@ -1,0 +1,5 @@
+<div>
+    <input hidden type="file" #fileUpload (change)="handleFileInput($event)">
+    <button mat-raised-button color="primary" (click)="fileUpload.click()">选择待转换的文件</button>
+    <p>已选择的文件：{{file?.name}}</p>
+</div>

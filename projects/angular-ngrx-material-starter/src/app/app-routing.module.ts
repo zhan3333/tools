@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
+import { ToolsModule } from './features/tools/tools.module';
 
 const routes: Routes = [
   {
@@ -32,6 +33,11 @@ const routes: Routes = [
       import('./features/examples/examples.module').then(
         (m) => m.ExamplesModule
       )
+  },
+  {
+    path: 'tools',
+    loadChildren: () =>
+      import('./features/tools/tools.module').then((m) => m.ToolsModule)
   },
   {
     path: '**',
